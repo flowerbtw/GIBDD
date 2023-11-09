@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace itogovoe_gibdd
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для DriversCardsListPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DriversCardsListPage : Page
     {
-        public MainWindow()
+        public DriversCardsListPage()
         {
             InitializeComponent();
-            mainFrame.Navigate(new LoginPage());
         }
     }
 }

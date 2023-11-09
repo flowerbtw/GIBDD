@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace itogovoe_gibdd
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для VenichlesListPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VenichlesListPage : Page
     {
-        public MainWindow()
+        public VenichlesListPage()
         {
             InitializeComponent();
-            mainFrame.Navigate(new LoginPage());
         }
     }
 }
