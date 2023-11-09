@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:itogovoe_gibdd"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-      Background="White"
+      Background="#B5D5CA"
       Title="StartPage">
 
     <Grid>
@@ -48,7 +48,7 @@
                 Name="DriversCardsListButton"
                 Grid.Row="1"
                 Content="Карточки водителей"
-                Background="#B5D5CA"
+                Background="#E0A9AF"
                 FontFamily="\Ubuntu.ttf"
                 FontSize="24px"
                 Margin="50 25 50 25"
@@ -58,7 +58,7 @@
                 Name="VenichlesListButton"
                 Grid.Row="2"
                 Content="Транспортные средства"
-                Background="#B5D5CA"
+                Background="#E0A9AF"
                 FontFamily="\Ubuntu.ttf"
                 FontSize="24px"
                 Margin="50 25 50 25"
@@ -68,7 +68,7 @@
                 Name="DriversLicensesListButton"
                 Grid.Row="3"
                 Content="Водительские удостоверения"
-                Background="#B5D5CA"
+                Background="#E0A9AF"
                 FontFamily="\Ubuntu.ttf"
                 FontSize="24px"
                 Margin="50 25 50 25"
@@ -78,7 +78,7 @@
                 Name="RoadAccidentsListButton"
                 Grid.Row="4"
                 Content="ДТП"
-                Background="#B5D5CA"
+                Background="#E0A9AF"
                 FontFamily="\Ubuntu.ttf"
                 FontSize="24px"
                 Margin="50 25 50 25"
@@ -106,7 +106,7 @@
             <Button
                 Name="ProfileButton"
                 BorderThickness="0"
-                Background="White"
+                Background="#B5D5CA"
                 HorizontalAlignment="Right"
                 Margin="15"
                 Click="ProfileButton_Click">

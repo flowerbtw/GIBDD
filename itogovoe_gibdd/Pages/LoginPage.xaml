@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:itogovoe_gibdd"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-      Background="White"
+      Background="#B5D5CA"
       Title="LoginPage">
 
     <Grid>
@@ -48,6 +48,7 @@
             FontFamily="\Ubuntu.ttf"
             FontSize="32px"
             VerticalAlignment="Center"
+            Padding="10 0 0 0"
             Margin="50 0 50 0"/>
 
         <TextBox
@@ -58,6 +59,7 @@
             FontFamily="\Ubuntu.ttf"
             FontSize="32px"
             VerticalAlignment="Center"
+            Padding="10 0 0 0"
             Margin="50 0 50 0"/>
 
         <Button
@@ -65,7 +67,7 @@
             Grid.Row="4"
             Grid.Column="1"
             Content="ВОЙТИ"
-            Background="#B5D5CA"
+            Background="#E0A9AF"
             FontFamily="\Ubuntu-Bold.ttf"
             FontWeight="Bold"
             FontSize="36px"
