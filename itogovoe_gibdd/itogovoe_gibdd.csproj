@@ -7,4 +7,17 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="gibdd_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="res\drawable\" />
+    <Folder Include="res\font\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="gibdd_logo.png" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,92 @@
+﻿<Page x:Class="itogovoe_gibdd.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:itogovoe_gibdd"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Background="White"
+      Title="LoginPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition
+                Height="0.5*"/>
+            <RowDefinition
+                Height="0.5*"/>
+            <RowDefinition
+                Height="0.5*"/>
+            <RowDefinition
+                Height="1.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock
+            Name="Header"
+            Grid.Row="1"
+            Grid.Column="1"
+            Text="Вход"
+            FontFamily="\Ubuntu-Bold.ttf"
+            FontWeight="Bold"
+            FontSize="48px"
+            Margin="0 120 0 0"
+            HorizontalAlignment="Center"/>
+
+        <TextBox
+            Name="LoginBox"
+            Grid.Row="2"
+            Grid.Column="1"
+            Text="Логин"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="32px"
+            VerticalAlignment="Center"
+            Margin="50 0 50 0"/>
+
+        <TextBox
+            Name="PasswordBox"
+            Grid.Row="3"
+            Grid.Column="1"
+            Text="Пароль"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="32px"
+            VerticalAlignment="Center"
+            Margin="50 0 50 0"/>
+
+        <Button
+            Name="LoginButton"
+            Grid.Row="4"
+            Grid.Column="1"
+            Content="ВОЙТИ"
+            Background="#B5D5CA"
+            FontFamily="\Ubuntu-Bold.ttf"
+            FontWeight="Bold"
+            FontSize="36px"
+            Margin="150 15 150 15"
+            Click="LoginButton_Click"/>
+
+        <TextBlock
+            Name="ForgotPassword"
+            Grid.Row="5"
+            Grid.Column="1"
+            Text="Забыли пароль?"
+            FontFamily="\Ubuntu.ttf"
+            FontWeight="Bold"
+            FontSize="24px"
+            HorizontalAlignment="Center"
+            Margin="0 15 0 0"/>
+
+        <Image
+            Name="Logo"
+            Grid.Row="5"
+            Grid.Column="2"
+            Source="/gibdd_logo.png"/>
+    </Grid>
+</Page>
