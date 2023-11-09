@@ -24,5 +24,30 @@ namespace itogovoe_gibdd
         {
             InitializeComponent();
         }
+
+        private void DriversCardsListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new DriversCardsListPage());
+        }
+
+        private void VenichlesListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new VenichlesListPage());
+        }
+
+        private void DriversLicensesListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new DriversLicensesListPage());
+        }
+
+        private void RoadAccidentsListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new RoadAccidentsListPage());
+        }
+
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new ProfilePage());
+        }
     }
 }
