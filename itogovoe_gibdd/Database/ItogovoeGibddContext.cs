@@ -15,17 +15,17 @@ public partial class ItogovoeGibddContext : DbContext
     {
     }
 
-    public virtual DbSet<DriversCard> DriversCards { get; set; }
+    public virtual DbSet<DriversCards> DriversCards { get; set; }
 
-    public virtual DbSet<DriversLicense> DriversLicenses { get; set; }
+    public virtual DbSet<DriversLicenses> DriversLicenses { get; set; }
 
-    public virtual DbSet<Penalty> Penalties { get; set; }
+    public virtual DbSet<Penalties> Penalties { get; set; }
 
-    public virtual DbSet<Profile> Profiles { get; set; }
+    public virtual DbSet<Profiles> Profiles { get; set; }
 
-    public virtual DbSet<RoadAccident> RoadAccidents { get; set; }
+    public virtual DbSet<RoadAccidents> RoadAccidents { get; set; }
 
-    public virtual DbSet<Venichle> Venichles { get; set; }
+    public virtual DbSet<Venichles> Venichles { get; set; }
 
     string basePath = AppDomain.CurrentDomain.BaseDirectory;
 
@@ -35,7 +35,7 @@ public partial class ItogovoeGibddContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<DriversCard>(entity =>
+        modelBuilder.Entity<DriversCards>(entity =>
         {
             entity.HasKey(e => e.Guid);
 
@@ -44,14 +44,14 @@ public partial class ItogovoeGibddContext : DbContext
                 .HasColumnName("GUID");
         });
 
-        modelBuilder.Entity<DriversLicense>(entity =>
+        modelBuilder.Entity<DriversLicenses>(entity =>
         {
             entity.HasKey(e => e.Number);
 
             entity.HasOne(d => d.OwnerNavigation).WithMany(p => p.DriversLicenses).HasForeignKey(d => d.Owner);
         });
 
-        modelBuilder.Entity<Penalty>(entity =>
+        modelBuilder.Entity<Penalties>(entity =>
         {
             entity.HasKey(e => e.Guid);
 
@@ -62,7 +62,7 @@ public partial class ItogovoeGibddContext : DbContext
             entity.HasOne(d => d.RecipientNavigation).WithMany(p => p.Penalties).HasForeignKey(d => d.Recipient);
         });
 
-        modelBuilder.Entity<Profile>(entity =>
+        modelBuilder.Entity<Profiles>(entity =>
         {
             entity.HasKey(e => e.Guid);
 
@@ -71,7 +71,7 @@ public partial class ItogovoeGibddContext : DbContext
                 .HasColumnName("GUID");
         });
 
-        modelBuilder.Entity<RoadAccident>(entity =>
+        modelBuilder.Entity<RoadAccidents>(entity =>
         {
             entity.HasKey(e => e.Guid);
 
@@ -84,7 +84,7 @@ public partial class ItogovoeGibddContext : DbContext
             entity.HasOne(d => d.VictimNavigation).WithMany(p => p.RoadAccidentVictimNavigations).HasForeignKey(d => d.Victim);
         });
 
-        modelBuilder.Entity<Venichle>(entity =>
+        modelBuilder.Entity<Venichles>(entity =>
         {
             entity.HasKey(e => e.Vin);
 

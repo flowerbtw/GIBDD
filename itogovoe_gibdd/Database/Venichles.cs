@@ -1,20 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace itogovoe_gibdd.Database
+namespace itogovoe_gibdd.Database;
+
+public partial class Venichles
 {
-    public class Venichles
-    {
-        public string VIN { get; set; }
-        public int Owner { get; set; }
-        public string Mark { get; set; }
-        public string Model { get; set; }
-        public string Type { get; set; }
-        public string Category { get; set; }
-        public string Color { get; set; }
-        public int Power { get; set; }
-    }
+    public string Vin { get; set; } = null!;
+
+    public long? Owner { get; set; }
+
+    public string? Mark { get; set; }
+
+    public string? Model { get; set; }
+
+    public string? Type { get; set; }
+
+    public string? Category { get; set; }
+
+    public string? Color { get; set; }
+
+    public long? Power { get; set; }
+
+    public virtual DriversCards? OwnerNavigation { get; set; }
 }

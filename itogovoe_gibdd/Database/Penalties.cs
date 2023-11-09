@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace itogovoe_gibdd.Database
+namespace itogovoe_gibdd.Database;
+
+public partial class Penalties
 {
-    public class Penalties
-    {
-        public int GUID { get; set; }
-        public int Recipient { get; set; }
-        public string Photo { get; set; }
-    }
+    public long Guid { get; set; }
+
+    public long? Recipient { get; set; }
+
+    public string? Photo { get; set; }
+
+    public virtual DriversCards? RecipientNavigation { get; set; }
 }

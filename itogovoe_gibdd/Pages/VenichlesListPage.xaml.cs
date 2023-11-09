@@ -1,4 +1,5 @@
-﻿using System;
+﻿using itogovoe_gibdd.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,47 @@ namespace itogovoe_gibdd
         public VenichlesListPage()
         {
             InitializeComponent();
+            DbConnect.dB = new ItogovoeGibddContext();
+
+            var venichles = DbConnect.dB.Venichles.Select(card =>
+            new
+            {
+                card.Vin,
+                card.Owner,
+                card.Mark,
+                card.Model,
+                card.Type,
+                card.Category,
+                card.Color,
+                card.Power
+            }).ToList();
+
+            DataGrid.ItemsSource = venichles;
+        }
+
+        private void DriversCardsListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new DriversCardsListPage());
+        }
+
+        private void VenichlesListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new VenichlesListPage());
+        }
+
+        private void DriversLicensesListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new DriversLicensesListPage());
+        }
+
+        private void RoadAccidentsListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new RoadAccidentsListPage());
+        }
+
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new ProfilePage());
         }
     }
 }

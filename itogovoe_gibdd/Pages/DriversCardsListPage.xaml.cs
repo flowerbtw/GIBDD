@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,9 +26,23 @@ namespace itogovoe_gibdd
         public DriversCardsListPage()
         {
             InitializeComponent();
+            DbConnect.dB = new ItogovoeGibddContext();
 
-            DbConnect.dB = new Database.ItogovoeGibddContext();
-            var driversCards = DbConnect.dB.DriversCards.ToList();
+            var driversCards = DbConnect.dB.DriversCards.Select(card =>
+            new
+            {
+                card.Guid,
+                card.Surname,
+                card.Name,
+                card.Passport,
+                card.RegistrationAddress,
+                card.ResidentialAddress,
+                card.Company,
+                card.Jobname,
+                card.PhoneNumber,
+                card.Email,
+                card.Notes
+            }).ToList();
 
             DataGrid.ItemsSource = driversCards;
         }

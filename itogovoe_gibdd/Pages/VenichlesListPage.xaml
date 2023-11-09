@@ -5,10 +5,141 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:itogovoe_gibdd"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Background="#B5D5CA"
       Title="VenichlesListPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="0.1*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="0.3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid
+            Name="MenuGrid"
+            Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="0.5*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition
+                    Height="3*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock
+                Name="MenuHeader"
+                Text="Меню"
+                FontFamily="\Ubuntu-Bold.ttf"
+                FontWeight="Bold"
+                FontSize="40px"
+                Margin="15"
+                HorizontalAlignment="Center"/>
+
+            <Button
+                Name="DriversCardsListButton"
+                Grid.Row="1"
+                Content="Карточки водителей"
+                Background="#E0A9AF"
+                FontFamily="\Ubuntu.ttf"
+                FontSize="24px"
+                Margin="50 25 50 25"
+                Click="DriversCardsListButton_Click"/>
+
+            <Button
+                Name="VenichlesListButton"
+                Grid.Row="2"
+                Content="Транспортные средства"
+                Background="#E0A9AF"
+                FontFamily="\Ubuntu.ttf"
+                FontSize="24px"
+                Margin="50 25 50 25"
+                Click="VenichlesListButton_Click"/>
+
+            <Button
+                Name="DriversLicensesListButton"
+                Grid.Row="3"
+                Content="Водительские удостоверения"
+                Background="#E0A9AF"
+                FontFamily="\Ubuntu.ttf"
+                FontSize="24px"
+                Margin="50 25 50 25"
+                Click="DriversLicensesListButton_Click"/>
+
+            <Button
+                Name="RoadAccidentsListButton"
+                Grid.Row="4"
+                Content="ДТП"
+                Background="#E0A9AF"
+                FontFamily="\Ubuntu.ttf"
+                FontSize="24px"
+                Margin="50 25 50 25"
+                Click="RoadAccidentsListButton_Click"/>
+
+            <Image
+                Name="MenuLogo"
+                Grid.Row="5"
+                Grid.Column="2"
+                Source="/gibdd_logo.png"
+                Margin="0 200 0 0"/>
+
+            <Border
+                Name="Border"
+                Grid.RowSpan="6"
+                BorderBrush="Black"
+                BorderThickness="2px"
+                Margin="-2,-2,0,-2"/>
+        </Grid>
+
+        <Grid
+            Name="ProfileGrid"
+            Grid.Column="1">
+
+            <TextBlock
+                Name="ContentHeader"
+                Text="Транспортные средства"
+                FontFamily="\Ubuntu-Bold.ttf"
+                FontWeight="Bold"
+                FontSize="40px"
+                Padding="30 0 0 0"
+                Margin="15"/>
+
+            <Button
+                Name="ProfileButton"
+                BorderThickness="0"
+                Background="#B5D5CA"
+                HorizontalAlignment="Right"
+                Margin="15"
+                Click="ProfileButton_Click">
+                <Image
+                    Source="/profile.png"/>
+            </Button>
+
+        </Grid>
+
+        <Grid
+            Name="ContentGrid"
+            Grid.Row="1"
+            Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="5*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <DataGrid
+                Name="DataGrid"
+                FontFamily="\Ubuntu.ttf"
+                FontSize="24px"
+                Margin="40"/>
+        </Grid>
     </Grid>
 </Page>

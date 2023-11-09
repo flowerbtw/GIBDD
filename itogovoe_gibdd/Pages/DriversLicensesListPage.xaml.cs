@@ -1,4 +1,5 @@
-﻿using System;
+﻿using itogovoe_gibdd.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,20 @@ namespace itogovoe_gibdd
         public DriversLicensesListPage()
         {
             InitializeComponent();
+            DbConnect.dB = new ItogovoeGibddContext();
+
+            var driversLicenses = DbConnect.dB.DriversLicenses.Select(card =>
+            new
+            {
+                card.Number,
+                card.Owner,
+                card.DateOfIssue,
+                card.DateOfExpiry,
+                card.WhoIssued,
+                card.Category,
+            }).ToList();
+
+            DataGrid.ItemsSource = driversLicenses;
         }
 
         private void DriversCardsListButton_Click(object sender, RoutedEventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using itogovoe_gibdd.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,43 @@ namespace itogovoe_gibdd
         public RoadAccidentsListPage()
         {
             InitializeComponent();
+            DbConnect.dB = new ItogovoeGibddContext();
+
+            var roadAccidents = DbConnect.dB.RoadAccidents.Select(card =>
+            new
+            {
+                card.Guid,
+                card.Class,
+                card.Culprit,
+                card.Victim
+            }).ToList();
+
+            DataGrid.ItemsSource = roadAccidents;
+        }
+
+        private void DriversCardsListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new DriversCardsListPage());
+        }
+
+        private void VenichlesListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new VenichlesListPage());
+        }
+
+        private void DriversLicensesListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new DriversLicensesListPage());
+        }
+
+        private void RoadAccidentsListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new RoadAccidentsListPage());
+        }
+
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new ProfilePage());
         }
     }
 }
