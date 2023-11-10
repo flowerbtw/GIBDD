@@ -5,10 +5,281 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:itogovoe_gibdd"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Background="#B5D5CA"
       Title="ProfilePage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition
+            Height="0.1*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+            Width="0.3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid
+        Name="MenuGrid"
+        Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                Height="0.5*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition
+                Height="3*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock
+            Name="MenuHeader"
+            Text="Меню"
+            FontFamily="\Ubuntu-Bold.ttf"
+            FontWeight="Bold"
+            FontSize="40px"
+            Margin="15"
+            HorizontalAlignment="Center"/>
+
+            <Button
+            Name="DriversCardsListButton"
+            Grid.Row="1"
+            Content="Карточки водителей"
+            Background="#E0A9AF"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="24px"
+            Margin="50 25 50 25"
+            Click="DriversCardsListButton_Click"/>
+
+            <Button
+            Name="VenichlesListButton"
+            Grid.Row="2"
+            Content="Транспортные средства"
+            Background="#E0A9AF"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="24px"
+            Margin="50 25 50 25"
+            Click="VenichlesListButton_Click"/>
+
+            <Button
+            Name="DriversLicensesListButton"
+            Grid.Row="3"
+            Content="Водительские удостоверения"
+            Background="#E0A9AF"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="24px"
+            Margin="50 25 50 25"
+            Click="DriversLicensesListButton_Click"/>
+
+            <Button
+            Name="RoadAccidentsListButton"
+            Grid.Row="4"
+            Content="ДТП"
+            Background="#E0A9AF"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="24px"
+            Margin="50 25 50 25"
+            Click="RoadAccidentsListButton_Click"/>
+
+            <Image
+            Name="MenuLogo"
+            Grid.Row="5"
+            Grid.Column="2"
+            Source="/Pages/gibdd_logo.png"
+            Margin="0 200 0 0"/>
+
+            <Border
+            Name="Border"
+            Grid.RowSpan="6"
+            BorderBrush="Black"
+            BorderThickness="2px"
+            Margin="-2,-2,0,-2"/>
+        </Grid>
+
+        <Grid
+        Name="ProfileGrid"
+        Grid.Column="1">
+
+            <TextBlock
+            Name="ContentHeader"
+            Text="Карточка водителя"
+            FontFamily="\Ubuntu-Bold.ttf"
+            FontWeight="Bold"
+            FontSize="40px"
+            Padding="30 0 0 0"
+            Margin="15"/>
+
+            <Button
+            Name="ProfileButton"
+            BorderThickness="0"
+            Background="#B5D5CA"
+            HorizontalAlignment="Right"
+            Margin="15"
+            Click="ProfileButton_Click">
+                <Image
+                Source="/Pages/profile.png"/>
+            </Button>
+
+        </Grid>
+
+        <Grid
+    Name="ContentGrid"
+    Grid.Row="1"
+    Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition
+            Height="5*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid
+        Name="TextGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition
+                Height="4*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock
+            Name="RegistrationAddress"
+            Grid.Row="2"
+            Text="{Binding RegistrationAddress}"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="32px"
+            VerticalAlignment="Bottom"
+            Margin="100 0 0 0"/>
+
+                <TextBlock
+            Name="ResidentialAddress"
+            Grid.Row="3"
+            Text="{Binding ResidentialAddress}"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="32px"
+            VerticalAlignment="Bottom"
+            Margin="100 0 0 0"/>
+
+                <TextBlock
+            Name="Company"
+            Grid.Row="4"
+            Text="{Binding Company}"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="32px"
+            VerticalAlignment="Bottom"
+            Margin="100 0 0 0"/>
+
+                <TextBlock
+            Name="Jobname"
+            Grid.Row="5"
+            Text="{Binding Jobname}"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="32px"
+            VerticalAlignment="Bottom"
+            Margin="100 0 0 0"/>
+
+                <TextBlock
+            Name="PhoneNumber"
+            Grid.Row="6"
+            Text="{Binding PhoneNumber}"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="32px"
+            VerticalAlignment="Bottom"
+            Margin="100 0 0 0"/>
+
+                <TextBlock
+            Name="Email"
+            Grid.Row="7"
+            Text="{Binding Email}"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="32px"
+            VerticalAlignment="Bottom"
+            Margin="100 0 0 0"/>
+
+                <TextBlock
+            Name="Notes"
+            Grid.Row="8"
+            Text="{Binding Notes}"
+            FontFamily="\Ubuntu.ttf"
+            FontSize="32px"
+            VerticalAlignment="Bottom"
+            Margin="100 0 0 0"/>
+
+                <Grid
+            Name="TopGrid"
+            Grid.Row="1"
+            Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                    Width="0.3*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                Name="Photo"
+                Source="/Pages/photo.jpg"/>
+
+                    <Grid
+                Name="TopTextGrid"
+                Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock
+                    Name="Surname"
+                    Text="{Binding Surname}"
+                    FontFamily="\Ubuntu.ttf"
+                    FontSize="32px"/>
+
+                        <TextBlock
+                    Name="Name"
+                    Grid.Row="1"
+                    Text="{Binding Name}"
+                    FontFamily="\Ubuntu.ttf"
+                    FontSize="32px"/>
+
+                        <TextBlock
+                    Name="Patronymic"
+                    Grid.Row="2"
+                    Text="{Binding Patronymic}"
+                    FontFamily="\Ubuntu.ttf"
+                    FontSize="32px"/>
+
+                        <TextBlock
+                    Name="Passport"
+                    Grid.Row="3"
+                    Text="{Binding Passport}"
+                    FontFamily="\Ubuntu.ttf"
+                    FontSize="32px"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <Button
+        Grid.Row="1"
+        Name="PenaltiesListButton"
+        Width="200"
+        Height="60"
+        Content="Штрафы"
+        Background="#E0A9AF"
+        FontFamily="\Ubuntu.ttf"
+        FontSize="20px"
+        VerticalAlignment="Top"
+        HorizontalAlignment="Right"
+        Margin="0, 0, 75 ,0"
+        Click="PenaltiesListButton_Click"/>
+        </Grid>
     </Grid>
 </Page>

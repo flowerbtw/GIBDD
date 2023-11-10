@@ -1,4 +1,6 @@
-﻿using System;
+﻿using itogovoe_gibdd.Database;
+using itogovoe_gibdd.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,34 @@ namespace itogovoe_gibdd
         public ProfilePage()
         {
             InitializeComponent();
+            DbConnect.dB = new ItogovoeGibddContext();
+            Profiles profile = DbConnect.dB.Profiles.FirstOrDefault();
+            DataContext = profile;
+        }
+
+        private void DriversCardsListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new DriversCardsListPage());
+        }
+
+        private void VenichlesListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new VenichlesListPage());
+        }
+
+        private void DriversLicensesListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new DriversLicensesListPage());
+        }
+
+        private void RoadAccidentsListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new RoadAccidentsListPage());
+        }
+
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new ProfilePage());
         }
     }
 }

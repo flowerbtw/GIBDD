@@ -35,6 +35,7 @@ namespace itogovoe_gibdd
                 card.Guid,
                 card.Surname,
                 card.Name,
+                card.Patronymic,
                 card.Passport,
                 card.RegistrationAddress,
                 card.ResidentialAddress,
@@ -42,7 +43,8 @@ namespace itogovoe_gibdd
                 card.Jobname,
                 card.PhoneNumber,
                 card.Email,
-                card.Notes
+                card.Notes,
+                card.Image
             }).ToList();
 
             DataGrid.ItemsSource = driversCards;

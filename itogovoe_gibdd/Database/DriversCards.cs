@@ -32,6 +32,8 @@ public partial class DriversCards
 
     public string? Notes { get; set; }
 
+    public string? Image { get; set; }
+
     public virtual ICollection<DriversLicenses> DriversLicenses { get; set; } = new List<DriversLicenses>();
 
     public virtual ICollection<Penalties> Penalties { get; set; } = new List<Penalties>();

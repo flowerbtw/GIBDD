@@ -1,4 +1,5 @@
 ﻿using itogovoe_gibdd.Database;
+using itogovoe_gibdd.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,7 @@ namespace itogovoe_gibdd
                 license.DateOfIssue,
                 license.DateOfExpiry,
                 license.WhoIssued,
+                license.WhereIssued,
                 license.Category,
                 license.Status
             }).ToList();

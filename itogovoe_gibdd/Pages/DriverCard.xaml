@@ -153,7 +153,7 @@
                 <TextBlock
                     Name="RegistrationAddress"
                     Grid.Row="2"
-                    Text="Российская Федерация, Республика Мордовия, г. Саранск, ул. Есенина, 18"
+                    Text="{Binding RegistrationAddress}"
                     FontFamily="\Ubuntu.ttf"
                     FontSize="32px"
                     VerticalAlignment="Bottom"
@@ -162,7 +162,7 @@
                 <TextBlock
                     Name="ResidentialAddress"
                     Grid.Row="3"
-                    Text="Российская Федерация, Республика Мордовия, г. Саранск, ул. Есенина, 18"
+                    Text="{Binding ResidentialAddress}"
                     FontFamily="\Ubuntu.ttf"
                     FontSize="32px"
                     VerticalAlignment="Bottom"
@@ -171,7 +171,7 @@
                 <TextBlock
                     Name="Company"
                     Grid.Row="4"
-                    Text="Heads and Hands"
+                    Text="{Binding Company}"
                     FontFamily="\Ubuntu.ttf"
                     FontSize="32px"
                     VerticalAlignment="Bottom"
@@ -180,7 +180,7 @@
                 <TextBlock
                     Name="Jobname"
                     Grid.Row="5"
-                    Text="Программист"
+                    Text="{Binding Jobname}"
                     FontFamily="\Ubuntu.ttf"
                     FontSize="32px"
                     VerticalAlignment="Bottom"
@@ -189,7 +189,7 @@
                 <TextBlock
                     Name="PhoneNumber"
                     Grid.Row="6"
-                    Text="+7 111 111 11-11"
+                    Text="{Binding PhoneNumber}"
                     FontFamily="\Ubuntu.ttf"
                     FontSize="32px"
                     VerticalAlignment="Bottom"
@@ -198,7 +198,7 @@
                 <TextBlock
                     Name="Email"
                     Grid.Row="7"
-                    Text="meln1kbtw@gmail.com"
+                    Text="{Binding Email}"
                     FontFamily="\Ubuntu.ttf"
                     FontSize="32px"
                     VerticalAlignment="Bottom"
@@ -207,7 +207,7 @@
                 <TextBlock
                     Name="Notes"
                     Grid.Row="8"
-                    Text="Заметок нет."
+                    Text="{Binding Notes}"
                     FontFamily="\Ubuntu.ttf"
                     FontSize="32px"
                     VerticalAlignment="Bottom"
@@ -239,28 +239,28 @@
 
                         <TextBlock
                             Name="Surname"
-                            Text="Мельников"
+                            Text="{Binding Surname}"
                             FontFamily="\Ubuntu.ttf"
                             FontSize="32px"/>
 
                         <TextBlock
                             Name="Name"
                             Grid.Row="1"
-                            Text="Артем"
+                            Text="{Binding Name}"
                             FontFamily="\Ubuntu.ttf"
                             FontSize="32px"/>
 
                         <TextBlock
                             Name="Patronymic"
                             Grid.Row="2"
-                            Text="Сергеевич"
+                            Text="{Binding Patronymic}"
                             FontFamily="\Ubuntu.ttf"
                             FontSize="32px"/>
 
                         <TextBlock
                             Name="Passport"
                             Grid.Row="3"
-                            Text="1111 111111"
+                            Text="{Binding Passport}"
                             FontFamily="\Ubuntu.ttf"
                             FontSize="32px"/>
                     </Grid>

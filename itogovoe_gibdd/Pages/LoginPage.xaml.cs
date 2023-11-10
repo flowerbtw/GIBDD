@@ -44,6 +44,14 @@ namespace itogovoe_gibdd
             return profile != null;
         }
 
+        private void Page_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                LoginButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+            }
+        }
+
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             string login = LoginTextBox.Text;

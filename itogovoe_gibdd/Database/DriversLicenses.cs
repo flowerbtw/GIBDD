@@ -15,6 +15,8 @@ public partial class DriversLicenses
 
     public string? WhoIssued { get; set; }
 
+    public string? WhereIssued { get; set; }
+
     public string? Category { get; set; }
 
     public string? Status { get; set; }

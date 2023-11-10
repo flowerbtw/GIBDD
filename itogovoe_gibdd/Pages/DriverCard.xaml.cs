@@ -24,6 +24,9 @@ namespace itogovoe_gibdd.Pages
         public DriverCard()
         {
             InitializeComponent();
+            DbConnect.dB = new ItogovoeGibddContext();
+            DriversCards card = DbConnect.dB.DriversCards.FirstOrDefault();
+            DataContext = card;
         }
 
         private void DriversCardsListButton_Click(object sender, RoutedEventArgs e)
