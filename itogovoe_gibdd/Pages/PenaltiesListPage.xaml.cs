@@ -14,28 +14,27 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace itogovoe_gibdd
+namespace itogovoe_gibdd.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для RoadAccidentsListPage.xaml
+    /// Логика взаимодействия для PenaltiesListPage.xaml
     /// </summary>
-    public partial class RoadAccidentsListPage : Page
+    public partial class PenaltiesListPage : Page
     {
-        public RoadAccidentsListPage()
+        public PenaltiesListPage()
         {
             InitializeComponent();
             DbConnect.dB = new ItogovoeGibddContext();
 
-            var roadAccidents = DbConnect.dB.RoadAccidents.Select(card =>
+            var penalties = DbConnect.dB.Penalties.Select(penalty =>
             new
             {
-                card.Guid,
-                card.Class,
-                card.Culprit,
-                card.Victim
+                penalty.Guid,
+                penalty.Recipient,
+                penalty.Photo,
             }).ToList();
 
-            DataGrid.ItemsSource = roadAccidents;
+            DataGrid.ItemsSource = penalties;
         }
 
         private void DriversCardsListButton_Click(object sender, RoutedEventArgs e)

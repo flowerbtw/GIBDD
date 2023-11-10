@@ -41,7 +41,7 @@
             HorizontalAlignment="Center"/>
 
         <TextBox
-            Name="LoginBox"
+            Name="LoginTextBox"
             Grid.Row="2"
             Grid.Column="1"
             Text="Логин"
@@ -49,10 +49,11 @@
             FontSize="32px"
             VerticalAlignment="Center"
             Padding="10 0 0 0"
-            Margin="50 0 50 0"/>
+            Margin="50 0 50 0"
+            GotFocus="LoginTextBox_GotFocus"/>
 
         <TextBox
-            Name="PasswordBox"
+            Name="PasswordTextBox"
             Grid.Row="3"
             Grid.Column="1"
             Text="Пароль"
@@ -60,7 +61,8 @@
             FontSize="32px"
             VerticalAlignment="Center"
             Padding="10 0 0 0"
-            Margin="50 0 50 0"/>
+            Margin="50 0 50 0"
+            GotFocus="PasswordTextBox_GotFocus"/>
 
         <Button
             Name="LoginButton"
@@ -89,6 +91,6 @@
             Name="Logo"
             Grid.Row="5"
             Grid.Column="2"
-            Source="/gibdd_logo.png"/>
+            Source="/Pages/gibdd_logo.png"/>
     </Grid>
 </Page>

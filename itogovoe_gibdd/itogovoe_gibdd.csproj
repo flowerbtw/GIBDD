@@ -9,6 +9,10 @@
 
   <ItemGroup>
     <None Remove="gibdd_logo.png" />
+    <None Remove="Pages\driver_license_template.jpg" />
+    <None Remove="Pages\gibdd_logo.png" />
+    <None Remove="Pages\photo.jpg" />
+    <None Remove="Pages\profile.png" />
     <None Remove="profile.png" />
   </ItemGroup>
 
@@ -28,6 +32,10 @@
 
   <ItemGroup>
     <Resource Include="gibdd_logo.png" />
+    <Resource Include="Pages\driver_license_template.jpg" />
+    <Resource Include="Pages\gibdd_logo.png" />
+    <Resource Include="Pages\photo.jpg" />
+    <Resource Include="Pages\profile.png" />
     <Resource Include="profile.png" />
   </ItemGroup>
 

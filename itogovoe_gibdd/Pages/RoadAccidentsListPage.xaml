@@ -139,7 +139,16 @@
                 Name="DataGrid"
                 FontFamily="\Ubuntu.ttf"
                 FontSize="24px"
-                Margin="40"/>
+                Margin="40">
+                <!--<DataGrid.RowStyle>
+                    <Style
+                        TargetType="DataGridRow">
+                        <EventSetter
+                            Event="MouseDoubleClick"
+                            Handler="OnRowDoubleClick"/>
+                    </Style>
+                </DataGrid.RowStyle>-->
+            </DataGrid>
         </Grid>
     </Grid>
 </Page>

@@ -88,7 +88,7 @@
                 Name="MenuLogo"
                 Grid.Row="5"
                 Grid.Column="2"
-                Source="/gibdd_logo.png"
+                Source="/Pages/gibdd_logo.png"
                 Margin="0 200 0 0"/>
 
             <Border
@@ -110,7 +110,8 @@
                 HorizontalAlignment="Right"
                 Margin="15"
                 Click="ProfileButton_Click">
-                <Image Source="/profile.png"/>
+                <Image
+                    Source="/Pages/profile.png"/>
             </Button>
 
         </Grid>
@@ -130,7 +131,7 @@
                 Name="ContentLogo"
                 Grid.Row="1"
                 Grid.Column="2"
-                Source="/gibdd_logo.png"/>
+                Source="/Pages/gibdd_logo.png"/>
         </Grid>
     </Grid>
 </Page>

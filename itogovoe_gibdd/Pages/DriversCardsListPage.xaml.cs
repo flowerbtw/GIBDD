@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using itogovoe_gibdd.Pages;
 
 namespace itogovoe_gibdd
 {
@@ -71,5 +72,15 @@ namespace itogovoe_gibdd
         {
             NavigationService?.Navigate(new ProfilePage());
         }
+
+        private void OnRowDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new DriverCard());
+        }
+
+        //private void CreateDriverCardButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    NavigationService?.Navigate(new CreateDriverCardPage());
+        //}
     }
 }

@@ -14,28 +14,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace itogovoe_gibdd
+namespace itogovoe_gibdd.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для RoadAccidentsListPage.xaml
+    /// Логика взаимодействия для DriverCard.xaml
     /// </summary>
-    public partial class RoadAccidentsListPage : Page
+    public partial class DriverCard : Page
     {
-        public RoadAccidentsListPage()
+        public DriverCard()
         {
             InitializeComponent();
-            DbConnect.dB = new ItogovoeGibddContext();
-
-            var roadAccidents = DbConnect.dB.RoadAccidents.Select(card =>
-            new
-            {
-                card.Guid,
-                card.Class,
-                card.Culprit,
-                card.Victim
-            }).ToList();
-
-            DataGrid.ItemsSource = roadAccidents;
         }
 
         private void DriversCardsListButton_Click(object sender, RoutedEventArgs e)
@@ -63,9 +51,9 @@ namespace itogovoe_gibdd
             NavigationService?.Navigate(new ProfilePage());
         }
 
-        //private void OnRowDoubleClick(object sender, MouseButtonEventArgs e)
-        //{
-        //    NavigationService.Navigate(new DriverCard());
-        //}
+        private void PenaltiesListButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new PenaltiesListPage());
+        }
     }
 }

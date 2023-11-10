@@ -1,4 +1,6 @@
-﻿using System;
+﻿using itogovoe_gibdd.Database;
+using Microsoft.Data.Sqlite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,9 +27,38 @@ namespace itogovoe_gibdd
             InitializeComponent();
         }
 
+        private void LoginTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            LoginTextBox.Text = string.Empty;
+        }
+
+        private void PasswordTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            PasswordTextBox.Text = string.Empty;
+        }
+
+        private bool CheckCredentials(string login, string password)
+        {
+            DbConnect.dB = new ItogovoeGibddContext();
+            var profile = DbConnect.dB.Profiles.FirstOrDefault(p => p.Login == login && p.Password == password);
+            return profile != null;
+        }
+
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new StartPage());
+            string login = LoginTextBox.Text;
+            string password = PasswordTextBox.Text;
+
+            bool isValidUser = CheckCredentials(login, password);
+
+            if (isValidUser)
+            {
+                NavigationService?.Navigate(new StartPage());
+            }
+            else
+            {
+                MessageBox.Show("Данные введены неверно.");
+            }
         }
     }
 }
