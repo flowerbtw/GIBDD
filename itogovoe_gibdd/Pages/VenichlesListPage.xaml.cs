@@ -26,17 +26,17 @@ namespace itogovoe_gibdd
             InitializeComponent();
             DbConnect.dB = new ItogovoeGibddContext();
 
-            var venichles = DbConnect.dB.Venichles.Select(card =>
+            var venichles = DbConnect.dB.Venichles.Select(venichle =>
             new
             {
-                card.Vin,
-                card.Owner,
-                card.Mark,
-                card.Model,
-                card.Type,
-                card.Category,
-                card.Color,
-                card.Power
+                venichle.Vin,
+                venichle.Owner,
+                venichle.Mark,
+                venichle.Model,
+                venichle.Type,
+                venichle.Category,
+                venichle.Color,
+                venichle.Power
             }).ToList();
 
             DataGrid.ItemsSource = venichles;

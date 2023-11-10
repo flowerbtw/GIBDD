@@ -31,7 +31,7 @@ namespace itogovoe_gibdd.Pages
             {
                 penalty.Guid,
                 penalty.Recipient,
-                penalty.Photo,
+                penalty.Photo
             }).ToList();
 
             DataGrid.ItemsSource = penalties;

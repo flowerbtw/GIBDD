@@ -26,13 +26,13 @@ namespace itogovoe_gibdd
             InitializeComponent();
             DbConnect.dB = new ItogovoeGibddContext();
 
-            var roadAccidents = DbConnect.dB.RoadAccidents.Select(card =>
+            var roadAccidents = DbConnect.dB.RoadAccidents.Select(accident =>
             new
             {
-                card.Guid,
-                card.Class,
-                card.Culprit,
-                card.Victim
+                accident.Guid,
+                accident.Class,
+                accident.Culprit,
+                accident.Victim
             }).ToList();
 
             DataGrid.ItemsSource = roadAccidents;

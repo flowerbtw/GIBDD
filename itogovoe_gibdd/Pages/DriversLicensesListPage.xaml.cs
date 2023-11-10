@@ -26,15 +26,16 @@ namespace itogovoe_gibdd
             InitializeComponent();
             DbConnect.dB = new ItogovoeGibddContext();
 
-            var driversLicenses = DbConnect.dB.DriversLicenses.Select(card =>
+            var driversLicenses = DbConnect.dB.DriversLicenses.Select(license =>
             new
             {
-                card.Number,
-                card.Owner,
-                card.DateOfIssue,
-                card.DateOfExpiry,
-                card.WhoIssued,
-                card.Category,
+                license.Number,
+                license.Owner,
+                license.DateOfIssue,
+                license.DateOfExpiry,
+                license.WhoIssued,
+                license.Category,
+                license.Status
             }).ToList();
 
             DataGrid.ItemsSource = driversLicenses;

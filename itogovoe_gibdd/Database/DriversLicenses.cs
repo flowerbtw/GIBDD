@@ -17,5 +17,7 @@ public partial class DriversLicenses
 
     public string? Category { get; set; }
 
+    public string? Status { get; set; }
+
     public virtual DriversCards? OwnerNavigation { get; set; }
 }
